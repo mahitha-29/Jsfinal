@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Storage Assignment</title>
+  </head>
+  <script type="text/javascript">
+    function localStorageCount(){   //function declaration with arrow 
+      localStorage.setItem("local", Number(localStorage.getItem("local")) + 1); //incrementing to previous value and storing in value
+      document.getElementById("localCount").innerHTML = localStorage.getItem("local");//displaying using getItem,value is retrieved.
+    }
+
+     function sessionStorageCount(){
+      sessionStorage.setItem("session",Number(sessionStorage.getItem("session")) + 1);
+      document.getElementById("sessionCount").innerHTML = sessionStorage.getItem("session");
+    }
+  </script>
+  <body>
+    <h2>Local Storage</h2>
+    <h3 id="localCount"></h3>
+    <button onclick="localStorageCount()">Increment</button>
+    <br />
+    <hr />
+    <h2>Session Storage</h2>
+    <h3 id="sessionCount"></h3>
+    <button onclick="sessionStorageCount()">Increment</button>
+  </body>
+</html>
